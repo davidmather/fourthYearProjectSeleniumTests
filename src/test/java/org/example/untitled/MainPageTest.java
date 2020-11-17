@@ -55,20 +55,20 @@ public class MainPageTest {
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(0)); //switches to new tab
         driver.get("https://localhost:8443");
-        MainPageTest.login("john@live.ie","Qazwsx09@");
+        MainPageTest.login("john@live.ie","");
         dismissAlert();
 
 
         driver.switchTo().window(tabs.get(1)); // switch back to main screen
         driver.get("https://localhost:8443");
-        login("davidmather@live.ie","Qazwsx09@");
+        login("davidmather@live.ie","");
         dismissAlert();
 
         driver.findElement(By.id("onlineUsersContainer")).findElement(By.tagName("div")).click();
 
         driver.switchTo().window(tabs.get(0)); //switches to new tab
         driver.get("https://localhost:8443");
-        login("john@live.ie","Qazwsx09@");
+        login("john@live.ie","");
         dismissAlert();
 
         driver.findElement(By.id("onlineUsersContainer")).findElement(By.tagName("div")).click();
